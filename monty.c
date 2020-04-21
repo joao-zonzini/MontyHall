@@ -8,9 +8,8 @@ void printaPorta(int tipoPorta); void trocaCor(int n);
 
 int main(int argc, char *argv[]) {
 
-  if (argc < 2) {
-    exit(0);
-  }
+  //sem argumentos o programa nao continua
+  argc > 2 ? : exit(0);
 
   long int iteracoes;
   long int vitoria = 0;
