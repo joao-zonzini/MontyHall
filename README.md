@@ -4,7 +4,7 @@ Em um final de semana meu pai não acreditou que era melhor sempre trocar de por
 
 Ele está convencido.
 
-Escrevi primeiro em C mas quis ver o quão devagar era em Python.
+Escrevi primeiro em C mas quis ver como era em Python.
 
 A sintaxe de execução do programa é:
 
