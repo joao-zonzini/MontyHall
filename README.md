@@ -4,4 +4,12 @@ Em um final de semana meu pai não acreditou que era melhor sempre trocar de por
 
 Ele está convencido.
 
-Escrevi primeiro em C mas quis ver o quão devagar era em Python.
+Escrevi primeiro em C mas quis ver como era em Python.
+
+A sintaxe de execução do programa é:
+
+```shell
+./monty [numero de iterações] [estratégia]
+```
+
+Sendo estratégia o que o jogador decidir fazer, ```t``` para trocar sempre de porta ou ```f``` para ficar sempre com a porta.
