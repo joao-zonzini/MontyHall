@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
-#define NUMERO_PORTAS 5
+#define NUMERO_PORTAS 3
 
 void printaPorta(int tipoPorta); void trocaCor(int n);
 
