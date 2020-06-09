@@ -2,6 +2,7 @@ import random
 import sys
 
 iteracoes = int(sys.argv[1])
+estrategia = str(sys.argv[2])
 
 vitoria = 0
 perdicao = 0
@@ -23,14 +24,18 @@ for i in range(iteracoes):
             portaCabra = j
             break;
 
-    if (portaJogador != 0 and portaCabra != 0):
-        portaJogador = 0
-    elif (portaJogador != 1 and portaCabra != 1):
-        portaJogador = 1
-    elif (portaJogador != 2 and portaCabra != 2):
-        portaJogador = 2
+    if estrategia == 't':
+        if (portaJogador != 0 and portaCabra != 0):
+            portaJogador = 0
+        elif (portaJogador != 1 and portaCabra != 1):
+            portaJogador = 1
+        elif (portaJogador != 2 and portaCabra != 2):
+            portaJogador = 2
 
-    print("Voce troca para a porta", portaJogador+1)
+        print("Voce troca para a porta", portaJogador+1)
+    else :
+        print("Voce continua na porta", portaJogador+1)
+
 
     if (premios[portaJogador] == "carro"):
         print("A sua porta tem um carro! PARABENS!")
@@ -45,5 +50,5 @@ for i in range(iteracoes):
 
 print("---------\n")
 
-print(vitoria, " vitorias")
-print(perdicao, " derrotas")
+print(vitoria, "vitorias -----> ", (vitoria * 100) / iteracoes, "%")
+print(perdicao, "derrotas -----> ", (perdicao * 100) / iteracoes, "%")
