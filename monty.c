@@ -19,6 +19,10 @@ int main(int argc, char *argv[]) {
   int portaJogador, portaCarro;
   int portasAbertas;
 
+  FILE *gnuplot = popen("gnuplot", "w");
+
+  fprintf(gnuplot, "plot '-'\n");
+
   srand(time(NULL));
   int seed = rand() % 100;
 
@@ -81,6 +85,7 @@ int main(int argc, char *argv[]) {
       perdicao++;
     }
 
+
     puts("");
 
     for (int j = 0; j < NUMERO_PORTAS; j++) {
@@ -92,6 +97,7 @@ int main(int argc, char *argv[]) {
 
     puts("\n");
 
+    fprintf(gnuplot, "%g %g\n", vitoria, i);
   }
 
   clock_t end = clock();
@@ -107,6 +113,11 @@ int main(int argc, char *argv[]) {
   trocaCor(0);
   printf("Tempo da iteracao: %.3f segundos\n", time_spent);
 
+
+  fprintf(gnuplot, "e\n");
+  fflush(gnuplot);
+
+  system("sleep 30");
 
   return 0;
 }
