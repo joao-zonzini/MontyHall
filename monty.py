@@ -1,11 +1,14 @@
 import random
 import sys
+import time
 
 iteracoes = int(sys.argv[1])
 estrategia = str(sys.argv[2])
 
 vitoria = 0
 perdicao = 0
+
+start_time = time.time()
 
 for i in range(iteracoes):
     premios = ["cabra", "cabra", "cabra"]
@@ -47,8 +50,13 @@ for i in range(iteracoes):
     print(" ")
 
     print(premios[0], "|", premios[1], "|", premios[2])
+    
+    print(" ")
+
+
+end_time = time.time()
 
 print("---------\n")
-
+print("Tempo de exec:", end_time - start_time, "segundos")
 print(vitoria, "vitorias -----> ", (vitoria * 100) / iteracoes, "%")
 print(perdicao, "derrotas -----> ", (perdicao * 100) / iteracoes, "%")
