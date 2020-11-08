@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import random
 import sys
 import time
@@ -25,15 +27,13 @@ for i in range(iteracoes):
         if (j != portaCarro and j != portaJogador):
             print("A porta", j+1, "tem uma cabra")
             portaCabra = j
-            break;
+            break
 
     if estrategia == 't':
-        if (portaJogador != 0 and portaCabra != 0):
-            portaJogador = 0
-        elif (portaJogador != 1 and portaCabra != 1):
-            portaJogador = 1
-        elif (portaJogador != 2 and portaCabra != 2):
-            portaJogador = 2
+        for k in range(0,3):
+            if (portaJogador != k and portaCabra != k):
+                portaJogador = k
+                break
 
         print("Voce troca para a porta", portaJogador+1)
     else:
