@@ -36,21 +36,21 @@ for i in range(iteracoes):
             portaJogador = 2
 
         print("Voce troca para a porta", portaJogador+1)
-    else :
+    else:
         print("Voce continua na porta", portaJogador+1)
 
 
-    if (premios[portaJogador] == "carro"):
+    if (portaJogador == portaCarro):
         print("A sua porta tem um carro! PARABENS!")
         vitoria = vitoria + 1
-    else :
+    else:
         print("A sua porta tem uma cabra! Mais sorte na proxima")
         perdicao = perdicao + 1
 
     print(" ")
 
     print(premios[0], "|", premios[1], "|", premios[2])
-    
+
     print(" ")
 
 

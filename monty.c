@@ -45,7 +45,6 @@ int main(int argc, char *argv[]) {
     printf("Voce escolheu a porta %d\n", portaJogador+1);
 
     while (portasAbertas != NUMERO_PORTAS - 2) {
-
       for (int j = 0; j < NUMERO_PORTAS; j++) {
         if (j != portaCarro && j != portaJogador && flagPremios[j] != 1) {
           printf("A porta %d tem uma cabra\n", j+1);
@@ -80,7 +79,6 @@ int main(int argc, char *argv[]) {
       printf("\033[0m");    //reseta
       perdicao++;
     }
-
 
     puts("");
 
