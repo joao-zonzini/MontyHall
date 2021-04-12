@@ -99,7 +99,7 @@ int main(int argc, char *argv[]) {
 
   puts("----------");
 
-  printf("Tempo da iteracao: %.3f segundos\n", time_spent);
+  printf("Tempo da iteracao: %.5f segundos\n", time_spent);
   trocaCor(1);
   printf("%ld vitorias -----> %ld%% \n", vitoria, (vitoria * 100) / iteracoes);
   trocaCor(2);
